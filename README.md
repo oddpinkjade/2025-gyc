@@ -73,7 +73,7 @@
 
    명령 프롬프트에서 다음 명령을 통해 설정을 확인할 수 있다.
 
-   > javac -version
+   > javac -version  
    java -version
    >
 
@@ -147,7 +147,7 @@ public class Hello {
 ```bash
 cd C:\temp
 
-// **javac -d** [바이트코드파일저장위치] [소스경로/*.java]
+// javac -d [바이트코드파일저장위치] [소스경로/*.java]
 javac -d bin src/ch01/sec06/Hello.java
 
 // 결과: C:\temp\bin\ch01\sec06\Hello.class 생성됨
@@ -156,7 +156,7 @@ javac -d bin src/ch01/sec06/Hello.java
 ### **04. 실행 (java 명령어)**
 
 ```bash
-// **java -cp** [바이트코드파일저장위치] [패키지・・・클래스명]
+// java -cp [바이트코드파일저장위치] [패키지・・・클래스명]
 java -cp bin ch01.sec06.Hello
 
 // 결과: 콘솔에 Hello, Java 출력됨
