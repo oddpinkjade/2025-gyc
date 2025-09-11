@@ -27,11 +27,12 @@ public class MyStatusAnalyzer {
         if (input == BAD_STATUS_THRESHOLD) {
             System.out.println("여긴 어디? \uD83D\uDE35");
 
-        } else if (input >= NORMAL_STATUS_THRESHOLD) {
-            System.out.println("완전 맑은 정신~ \uD83C\uDF40");
-
         } else if (input >= GOOD_STATUS_THRESHOLD) {
             System.out.println("기분 좋은 상태! \uD83D\uDE04");
+
+        }
+        else if (input >= NORMAL_STATUS_THRESHOLD) {
+            System.out.println("완전 맑은 정신~ \uD83C\uDF40");
 
         }
     }
