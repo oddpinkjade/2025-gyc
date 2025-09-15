@@ -41,6 +41,7 @@ public class Deposit {
                         // xxx 출금되었습니다.
                         System.out.printf("%d원이 출금되었습니다.%n", withdrawAmount);
                     }
+                    break;
                 case 3: // 3번 입력 시, 잔고: xxx 원
                     System.out.printf("잔고: %d원\n", balance);
                     break;
