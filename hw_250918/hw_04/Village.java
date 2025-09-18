@@ -2,35 +2,28 @@ package hw_250918.hw_04;
 
 public class Village {
 
+    private static final int RESIDENT_COUNT = 5;
+
     public static void main(String[] args) {
+
+        String[] names = {"소령", "효정", "채연", "건우", "정민"};
+        int[] ages = {15, 20, 26, 26, 16};
+
         // 5명의 Person 객체 배열을 만들어
-        Person[] people = new Person[5];
+        Person[] people = new Person[RESIDENT_COUNT];
 
-        for (int i = 0; i < people.length; i++) {
+        for (int i = 0; i < RESIDENT_COUNT; i++) {
             people[i] = new Person();
+            // set 메서드로 값 저장
+            people[i].setName(names[i]);
+            people[i].setAge(ages[i]);
         }
-
-        // set 메서드로 값 저장
-        people[0].setName("소령");
-        people[0].setAge(15);
-
-        people[1].setName("효정");
-        people[1].setAge(20);
-
-        people[2].setName("채연");
-        people[2].setAge(26);
-
-        people[3].setName("건우");
-        people[3].setAge(26);
-
-        people[4].setName("정민");
-        people[4].setAge(16);
 
         // get 메서드로 출력
         System.out.println("[마을 주민 목록]");
-        for (int i = 0; i < people.length; i++) {
-            System.out.println((i + 1) + "번 주민 - 이름: " + people[i].getName()
-                    + ", 나이: " + people[i].getAge() + "세");
+        for (int i = 0; i < RESIDENT_COUNT; i++) {
+            System.out.printf("%d번 주민 - 이름: %s, 나이: %d세%n",
+                    i + 1, people[i].getName(), people[i].getAge());
         }
     }
 }
