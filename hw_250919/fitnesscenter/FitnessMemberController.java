@@ -1,7 +1,9 @@
 package hw_250919.fitnesscenter;
 
+import static hw_250919.InputUtils.readInt;
+import static hw_250919.InputUtils.readLine;
+
 import java.util.List;
-import java.util.Scanner;
 
 // TODO: 추후 고려할 점) Controller 인터페이스 생성
 public class FitnessMemberController {
@@ -9,7 +11,6 @@ public class FitnessMemberController {
     private final int MIN_COMMAND_VALUE = 0;
     private final int MAX_COMMAND_VALUE = 2;
 
-    private final Scanner scanner = new Scanner(System.in);
     private final FitnessMemberService fitnessMemberService;
 
     public FitnessMemberController(FitnessMemberService fitnessMemberService) {
@@ -70,19 +71,5 @@ public class FitnessMemberController {
         for (FitnessMember fitnessMember : allFitnessMembers) {
             System.out.println(fitnessMember);
         }
-    }
-
-    /* 입력 메서드 */
-    // TODO: 유틸 클래스로 분리
-    private String readLine(String prompt) {
-        System.out.println(prompt);
-        return scanner.nextLine();
-    }
-
-    private int readInt(String prompt) {
-        System.out.print(prompt);
-        int input = scanner.nextInt();
-        scanner.nextLine();
-        return input;
     }
 }

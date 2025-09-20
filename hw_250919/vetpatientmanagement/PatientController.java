@@ -1,14 +1,15 @@
 package hw_250919.vetpatientmanagement;
 
+import static hw_250919.InputUtils.readInt;
+import static hw_250919.InputUtils.readLine;
+
 import java.util.List;
-import java.util.Scanner;
 
 public class PatientController {
 
     private final int MIN_COMMAND_VALUE = 0;
     private final int MAX_COMMAND_VALUE = 2;
 
-    private final Scanner scanner = new Scanner(System.in);
     private final PatientService patientService;
 
     public PatientController(PatientService patientService) {
@@ -70,18 +71,5 @@ public class PatientController {
         for (Patient patient : allPatients) {
             System.out.println(patient);
         }
-    }
-
-    /* 입력 메서드 */
-    private String readLine(String prompt) {
-        System.out.println(prompt);
-        return scanner.nextLine();
-    }
-
-    private int readInt(String prompt) {
-        System.out.print(prompt);
-        int input = scanner.nextInt();
-        scanner.nextLine();
-        return input;
     }
 }

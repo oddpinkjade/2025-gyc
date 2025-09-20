@@ -1,15 +1,17 @@
 package hw_250919.ingredientinventory;
 
+import static hw_250919.InputUtils.readDate;
+import static hw_250919.InputUtils.readInt;
+import static hw_250919.InputUtils.readLine;
+
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Scanner;
 
 public class IngredientController {
 
     private final int MIN_COMMAND_VALUE = 0;
     private final int MAX_COMMAND_VALUE = 2;
 
-    private final Scanner scanner = new Scanner(System.in);
     private final IngredientService ingredientService;
 
     public IngredientController(IngredientService ingredientService) {
@@ -70,24 +72,5 @@ public class IngredientController {
         for (Ingredient ingredient : allIngredients) {
             System.out.println(ingredient);
         }
-    }
-
-    /* 입력 메서드 */
-    private String readLine(String prompt) {
-        System.out.println(prompt);
-        return scanner.nextLine();
-    }
-
-    private int readInt(String prompt) {
-        System.out.print(prompt);
-        int input = scanner.nextInt();
-        scanner.nextLine();
-        return input;
-    }
-
-    private LocalDate readDate(String prompt) {
-        System.out.print(prompt);
-        String input = scanner.nextLine();
-        return LocalDate.parse(input);
     }
 }
