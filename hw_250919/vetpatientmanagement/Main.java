@@ -8,5 +8,4 @@ public class Main {
         PatientController controller = new PatientController(service);
         controller.run();
     }
-
 }

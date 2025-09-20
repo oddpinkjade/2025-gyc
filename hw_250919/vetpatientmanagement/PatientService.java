@@ -23,5 +23,4 @@ public class PatientService {
     public List<Patient> getAllPatients() {
         return patientDao.findAll();
     }
-
 }
