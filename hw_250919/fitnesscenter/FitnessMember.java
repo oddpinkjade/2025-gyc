@@ -28,3 +28,7 @@ public class FitnessMember {
                 '}';
     }
 }
+
+
+
+❤️가희 언니의 깔끔하고 완벽한 코드 확인했습니당~!!
