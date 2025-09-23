@@ -1,6 +1,5 @@
 package hw_250923;
 
-import java.time.LocalDate;
 import java.util.Scanner;
 
 public class InputUtils {
@@ -17,11 +16,5 @@ public class InputUtils {
         int input = scanner.nextInt();
         scanner.nextLine();
         return input;
-    }
-
-    public static LocalDate readDate(String prompt) {
-        System.out.print(prompt);
-        String input = scanner.nextLine();
-        return LocalDate.parse(input);
     }
 }
