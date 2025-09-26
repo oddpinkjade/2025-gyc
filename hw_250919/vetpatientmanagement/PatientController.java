@@ -1,7 +1,7 @@
 package hw_250919.vetpatientmanagement;
 
-import static hw_250919.InputUtils.readInt;
-import static hw_250919.InputUtils.readLine;
+import static utils.InputUtils.readInt;
+import static utils.InputUtils.readLine;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
 package hw_250919.ingredientinventory;
 
-import static hw_250919.InputUtils.readDate;
-import static hw_250919.InputUtils.readInt;
-import static hw_250919.InputUtils.readLine;
+import static utils.InputUtils.readInt;
+import static utils.InputUtils.readLine;
+import static utils.InputUtils.readDate;
 
 import java.time.LocalDate;
 import java.util.List;

@@ -1,4 +1,4 @@
-package hw_250919;
+package utils;
 
 import java.time.LocalDate;
 import java.util.Scanner;
@@ -15,6 +15,13 @@ public class InputUtils {
     public static int readInt(String prompt) {
         System.out.print(prompt);
         int input = scanner.nextInt();
+        scanner.nextLine();
+        return input;
+    }
+
+    public static Long readLong(String prompt) {
+        System.out.print(prompt);
+        Long input = scanner.nextLong();
         scanner.nextLine();
         return input;
     }
