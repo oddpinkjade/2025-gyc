@@ -1,4 +1,4 @@
-package hw_20250929;
+package hw_250929;
 
 import static utils.InputUtils.readInt;
 import static utils.InputUtils.readLine;
