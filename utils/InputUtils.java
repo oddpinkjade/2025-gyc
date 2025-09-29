@@ -8,7 +8,7 @@ public class InputUtils {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static String readLine(String prompt) {
-        System.out.println(prompt);
+        System.out.print(prompt);
         return scanner.nextLine();
     }
 
