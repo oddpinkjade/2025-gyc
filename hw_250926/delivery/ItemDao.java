@@ -81,6 +81,7 @@ public class ItemDao {
                     i.setOrderLimit(newOrderLimit);
                     i.setStock(newStock);
                 });
+        writeCsv();
     }
 
     public boolean delete(Long id) {
