@@ -8,8 +8,8 @@ import java.util.List;
 
 public class VisitHistoryController {
 
-    private final int MIN_COMMAND_VALUE = 0;
-    private final int MAX_COMMAND_VALUE = 2;
+    private static final int MIN_COMMAND_VALUE = 0;
+    private static final int MAX_COMMAND_VALUE = 5;
 
     private final VisitHistoryService visitHistoryService;
 

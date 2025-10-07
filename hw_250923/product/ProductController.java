@@ -9,8 +9,8 @@ import java.util.Scanner;
 // 사용자 제어 영역
 public class ProductController {
 
-    private final int MIN_COMMAND_VALUE = 0;
-    private final int MAX_COMMAND_VALUE = 6;
+    private static final int MIN_COMMAND_VALUE = 0;
+    private static final int MAX_COMMAND_VALUE = 6;
 
     private final Scanner scanner = new Scanner(System.in);
     private final ProductService productService;

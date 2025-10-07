@@ -1,15 +1,15 @@
 package hw_250919.fitnesscenter;
 
-import static hw_250919.InputUtils.readInt;
-import static hw_250919.InputUtils.readLine;
+import static utils.InputUtils.readInt;
+import static utils.InputUtils.readLine;
 
 import java.util.List;
 
 // TODO: 추후 고려할 점) Controller 인터페이스 생성
 public class FitnessMemberController {
 
-    private final int MIN_COMMAND_VALUE = 0;
-    private final int MAX_COMMAND_VALUE = 2;
+    private static final int MIN_COMMAND_VALUE = 0;
+    private static final int MAX_COMMAND_VALUE = 2;
 
     private final FitnessMemberService fitnessMemberService;
 
@@ -30,7 +30,17 @@ public class FitnessMemberController {
                     addMember();
                     break;
                 case 2:
-                    getAllMembers();
+                    //getAllMembers();
+                    List<FitnessMember> allFitnessMembers = fitnessMemberService.getAllFitnessMembers();
+//                    if (allFitnessMembers.isEmpty()) {
+//                        System.out.println("등록된 회원이 없습니다.");
+//                        return;
+//                    }
+
+                    System.out.println("\n[전체 회원 목록]");
+                    for (FitnessMember fitnessMember : allFitnessMembers) {
+                        System.out.println(fitnessMember.toString());
+                    }
                     break;
                 default:
                     System.out.printf("%d~%d 사이의 숫자만 입력하세요.", MIN_COMMAND_VALUE, MAX_COMMAND_VALUE);

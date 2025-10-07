@@ -5,14 +5,12 @@ import static utils.InputUtils.readLine;
 import static utils.InputUtils.readLong;
 
 import java.util.List;
-import java.util.Scanner;
 
 public class ItemController {
 
-    private final int MIN_COMMAND_VALUE = 0;
-    private final int MAX_COMMAND_VALUE = 6;
+    private static final int MIN_COMMAND_VALUE = 0;
+    private static final int MAX_COMMAND_VALUE = 6;
 
-    private final Scanner scanner = new Scanner(System.in);
     private final ItemService itemService;
 
     public ItemController(ItemService itemService) {
@@ -22,8 +20,7 @@ public class ItemController {
     public void run() {
         while (true) {
             printMenu();
-            int command = scanner.nextInt();
-            scanner.nextLine();
+            int command = readInt("번호 입력: ");
 
             switch (command) {
                 case 1:
@@ -62,7 +59,6 @@ public class ItemController {
         System.out.println("5. 상품 정보 수정");
         System.out.println("6. 통계");
         System.out.println("0. 종료");
-        System.out.print("> ");
     }
 
     private void addItem() {
