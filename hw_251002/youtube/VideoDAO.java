@@ -1,5 +1,6 @@
 package hw_251002.youtube;
 
+import hw_251002.DBUtil;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

@@ -1,4 +1,4 @@
-package hw_251002.youtube;
+package hw_251002;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
