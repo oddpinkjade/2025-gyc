@@ -2,8 +2,8 @@ package hw_251002.travel;
 
 public class TravelSpot {
 
-    private static final int MIN_RATING = 0;
-    private static final int MAX_RATING = 5;
+    private static final double MIN_RATING = 0;
+    private static final double MAX_RATING = 5;
 
     private Long id;
     private String name;
@@ -28,7 +28,7 @@ public class TravelSpot {
 
     private void validateRating(double rating) {
         if (rating < MIN_RATING || rating > MAX_RATING) {
-            throw new IllegalArgumentException("평점은 0.0 이상 5.0 이하여야 합니다.");
+            throw new IllegalArgumentException(String.format("평점은 %.1f 이상 %.1f 이하여야 합니다.", MIN_RATING, MAX_RATING));
         }
     }
 
